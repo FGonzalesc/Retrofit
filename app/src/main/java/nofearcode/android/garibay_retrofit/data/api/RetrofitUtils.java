@@ -20,7 +20,7 @@ public class RetrofitUtils {
                 .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                 .create();
         return new Retrofit.Builder()
-                .baseUrl("http://jsonplaceholder.typicode.com/")
+                .baseUrl("http://pokeapi.co/api/v2/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
     }

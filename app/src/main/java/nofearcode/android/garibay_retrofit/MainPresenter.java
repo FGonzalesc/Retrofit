@@ -4,10 +4,11 @@ import android.util.Log;
 
 import nofearcode.android.garibay_retrofit.data.api.RestClient;
 import nofearcode.android.garibay_retrofit.data.api.RetrofitUtils;
-import nofearcode.android.garibay_retrofit.data.model.Greeting;
+import nofearcode.android.garibay_retrofit.data.model.PokemonFeed;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 
 /**
  * Created by raitom on 18/06/16.
@@ -21,13 +22,13 @@ public class MainPresenter {
 
     public void getData() {
         RestClient restClient = RetrofitUtils.getInstance().create(RestClient.class);
-        Call<Greeting> call = restClient.getData();
-        call.enqueue(new Callback<Greeting>() {
+        Call<PokemonFeed> call = restClient.getData();
+        call.enqueue(new Callback<PokemonFeed>() {
             @Override
-            public void onResponse(Call<Greeting> call, Response<Greeting> response) {
+            public void onResponse(Call<PokemonFeed> call, Response<PokemonFeed> response) {
                 switch (response.code()) {
                     case 200:
-                        Greeting data = response.body();
+                        PokemonFeed data = response.body();
                         view.showdata(data);
                         break;
                     case 401:
@@ -40,7 +41,7 @@ public class MainPresenter {
             }
 
             @Override
-            public void onFailure(Call<Greeting> call, Throwable t) {
+            public void onFailure(Call<PokemonFeed> call, Throwable t) {
                 Log.e("error", t.toString());
             }
         });
