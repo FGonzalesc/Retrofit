@@ -10,26 +10,11 @@
     tools:context="nofearcode.android.garibay_retrofit.MainActivity">
 
 
-
-   <TextView
-       android:id="@+id/tv_name"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/tv_2"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mi_recicler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
-    <TextView
-        android:id="@+id/tv_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/tv_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 
 

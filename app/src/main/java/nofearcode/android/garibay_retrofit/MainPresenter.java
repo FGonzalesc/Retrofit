@@ -29,7 +29,7 @@ public class MainPresenter {
                 switch (response.code()) {
                     case 200:
                         PokemonFeed data = response.body();
-                        view.showdata(data);
+                        view.notifyDataSetChanged(data.getResults());
                         break;
                     case 401:
 
