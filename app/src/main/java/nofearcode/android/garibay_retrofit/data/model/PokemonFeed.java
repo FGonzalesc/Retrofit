@@ -1,4 +1,4 @@
-package nofearcode.android.garibay_retrofit.data.model;
+    package nofearcode.android.garibay_retrofit.data.model;
 
 import java.util.ArrayList;
 import java.util.List;

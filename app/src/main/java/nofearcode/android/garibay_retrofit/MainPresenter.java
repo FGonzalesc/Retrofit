@@ -23,6 +23,7 @@ public class MainPresenter {
     public void getData() {
         RestClient restClient = RetrofitUtils.getInstance().create(RestClient.class);
         Call<PokemonFeed> call = restClient.getData();
+
         call.enqueue(new Callback<PokemonFeed>() {
             @Override
             public void onResponse(Call<PokemonFeed> call, Response<PokemonFeed> response) {
@@ -46,4 +47,7 @@ public class MainPresenter {
             }
         });
     }
+
+
+
 }
