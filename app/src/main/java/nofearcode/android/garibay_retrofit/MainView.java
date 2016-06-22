@@ -9,4 +9,6 @@ import nofearcode.android.garibay_retrofit.data.model.Result;
  */
 public interface MainView {
     void notifyDataSetChanged(List<Result> pokemon);
+
+    void navigateToDetails(int idPokemon);
 }
